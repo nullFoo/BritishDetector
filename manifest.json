@@ -1,0 +1,13 @@
+{
+  "name": "British Detector",
+  "description" : "Finds your British Value based on your search history",
+  "version": "0.3",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "history"
+  ]
+}
