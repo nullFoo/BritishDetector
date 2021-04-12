@@ -8,6 +8,8 @@
     "default_icon": "icon.png"
   },
   "permissions": [
-    "history"
+    "history",
+    "identity",
+    "identity.email"
   ]
 }
