@@ -8,7 +8,6 @@ var dict = {
     "her majesty queen elizabeth":150,
     "colonise":50,
     "britain":10,
-    "uk":15,
     "northern ireland":20
 };
 var names = [
