@@ -1,12 +1,15 @@
 var bv = 0;
 var dict = {
-    "tea":10,
+    "tea":25,
     "crumpet":50,
     "majesty":50,
     "queen elizabeth":25,
     "hm queen elizabeth":100,
     "her majesty queen elizabeth":150,
-    "colonise":50
+    "colonise":50,
+    "britain":10,
+    "uk":15,
+    "northern ireland":20
 };
 var names = [
   "james",
