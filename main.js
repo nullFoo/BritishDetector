@@ -8,7 +8,9 @@ var dict = {
     "her majesty queen elizabeth":150,
     "colonise":50,
     "britain":10,
-    "northern ireland":20
+    "northern ireland":20,
+    "shank":50,
+    "knife":10
 };
 var names = [
   "james",
@@ -46,6 +48,7 @@ var email;
 
 chrome.history.search({text: '', maxResults: 1000}, function(data) {
     data.forEach(function(page) {
+        console.log(page.title);
         for(var key in dict) {
           if(page.title.includes(key)) {
               bv += dict[key];
