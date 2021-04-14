@@ -10,7 +10,11 @@ var dict = {
     "britain":10,
     "northern ireland":20,
     "shank":50,
-    "knife":10
+    "knife":10,
+    "royal family":10,
+    "prince phillip":10,
+    "prince charles":25,
+    "france":5
 };
 var names = [
   "james",
@@ -37,6 +41,10 @@ var names = [
   "steve",
   "andrew",
 
+  "elizabeth",
+  "liz",
+  "mary",
+
   "smith",
   "brown",
   "wilson",
@@ -62,8 +70,11 @@ document.getElementById('button').onclick = function(){
           names.forEach(function(name) {
               if(email.includes(name)) {
                   bv += 25;
+                  document.getElementById("amount").innerHTML = "Your British Value is:" + bv;
               }
           });
         });
     });
+
+    document.getElementById("amount").innerHTML = "Your British Value is:" + bv;
 };
