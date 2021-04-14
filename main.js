@@ -59,7 +59,7 @@ document.getElementById('button').onclick = function(){
     chrome.history.search({text: '', maxResults: 10000, startTime:0}, function(data) {
         data.forEach(function(page) {
             for(var key in dict) {
-              if(page.title.includes(key)) {
+              if(page.title.toLowerCase().includes(key)) {
                   bv += dict[key];
                   document.getElementById("amount").innerHTML = "Your British Value is:" + bv;
               }
@@ -68,7 +68,7 @@ document.getElementById('button').onclick = function(){
         chrome.identity.getProfileUserInfo(function(info) {
           email = info.email;
           names.forEach(function(name) {
-              if(email.includes(name)) {
+              if(email.toLowerCase().includes(name)) {
                   bv += 25;
                   document.getElementById("amount").innerHTML = "Your British Value is:" + bv;
               }
