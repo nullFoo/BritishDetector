@@ -46,22 +46,24 @@ var names = [
 ];
 var email;
 
-chrome.history.search({text: '', maxResults: 1000}, function(data) {
-    data.forEach(function(page) {
-        console.log(page.title);
-        for(var key in dict) {
-          if(page.title.includes(key)) {
-              bv += dict[key];
-              document.getElementById("amount").innerHTML = "Your British Value is:" + bv;
-          }
-        }
+document.getElementById('button').onclick = function(){
+    bv = 0;
+    chrome.history.search({text: '', maxResults: 10000, startTime:0}, function(data) {
+        data.forEach(function(page) {
+            for(var key in dict) {
+              if(page.title.includes(key)) {
+                  bv += dict[key];
+                  document.getElementById("amount").innerHTML = "Your British Value is:" + bv;
+              }
+            }
+        });
+        chrome.identity.getProfileUserInfo(function(info) {
+          email = info.email;
+          names.forEach(function(name) {
+              if(email.includes(name)) {
+                  bv += 25;
+              }
+          });
+        });
     });
-    chrome.identity.getProfileUserInfo(function(info) {
-      email = info.email;
-      names.forEach(function(name) {
-          if(email.includes(name)) {
-              bv += 25;
-          }
-      });
-    });
-});
+};
