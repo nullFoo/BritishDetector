@@ -14,7 +14,18 @@ var dict = {
     "royal family":10,
     "prince phillip":10,
     "prince charles":25,
-    "france":5
+    "france":5,
+    "shire":5,
+    "worcestershire":25,
+    "crisps":50,
+    "to kg":5,
+    "to cm":5,
+    "metre":25,
+    "to metre":10,
+    "to meter":5,
+    "£":40,
+    "usd to pound":50,
+    "ise":10
 };
 var names = [
   "james",
